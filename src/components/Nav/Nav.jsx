@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./Nav.module.css";
-import { ReactComponent as VectorLogo } from "../../Assets/logo-vector.svg";
+import logoUrl from "../../Assets/logo-vector.svg";
 
 /**
  * Fixed top nav. Manages its own scrolled state so it can gain a
@@ -20,7 +20,7 @@ export default function Nav() {
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.left}>
-        <VectorLogo width={24} height={24} />
+        <img src={logoUrl} alt="WealthWise logo" width={24} height={24} />
         <span className={styles.brand}>WEALTHWISE</span>
       </div>
       <div className={styles.links}>

@@ -1,5 +1,5 @@
 import styles from "./Loader.module.css";
-import { ReactComponent as VectorLogo } from "../../Assets/logo-vector.svg";
+import logoUrl from "../../Assets/logo-vector.svg";
 
 export default function Loader({ progress }) {
   const pct = Math.min(100, Math.floor(progress));
@@ -7,7 +7,7 @@ export default function Loader({ progress }) {
   return (
     <div className={styles.loader} role="status" aria-live="polite">
       <div className={styles.mark}>
-        <VectorLogo width={40} height={40} />
+        <img src={logoUrl} alt="WealthWise logo" width={40} height={40} />
       </div>
       <div className={styles.barRow}>
         <span className={styles.mono}>INITIALIZING WEALTHWISE — {pct}%</span>
