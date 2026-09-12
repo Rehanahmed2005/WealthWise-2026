@@ -9,6 +9,7 @@
   --bg-surface: #10151d;
   --bg-surface-2: #161d27;
   --line: #212b36;
+  --frame-line: rgba(242, 246, 244, 0.32);
 
   --text: #f2f6f4;
   --text-muted: #8391a0;

@@ -6,6 +6,7 @@ export const colors = {
   bgSurface: "#10151d",
   bgSurface2: "#161d27",
   line: "#212b36",
+  frameLine: "rgba(242, 246, 244, 0.32)",
   text: "#f2f6f4",
   textMuted: "#8391a0",
   green: "#14e8a0",

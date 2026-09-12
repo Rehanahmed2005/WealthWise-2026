@@ -103,8 +103,8 @@
   top: 0;
   bottom: 0;
   left: 16px;
-  width: 1px;
-  background: var(--line);
+  width: 1.5px;
+  background: var(--frame-line);
 }
 
 .frame::after {                /* horizontal line, full width, under nav */
@@ -113,6 +113,6 @@
   top: var(--nav-height);
   left: 0;
   right: 0;
-  height: 1px;
-  background: var(--line);
+  height: 1.5px;
+  background: var(--frame-line);
 }
