@@ -20,7 +20,7 @@ export default function Nav() {
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.left}>
-        <img src={logoUrl} alt="WealthWise logo" width={24} height={24} />
+        <img src={logoUrl} alt="WealthWise logo" width={32} height={32} />
         <span className={styles.brand}>WEALTHWISE</span>
       </div>
       <div className={styles.links}>
