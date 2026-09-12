@@ -1,0 +1,118 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 clamp(20px, 5vw, 56px) 90px;
+  overflow: hidden;
+  cursor: none;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(20, 232, 160, 0.1), transparent 55%),
+    radial-gradient(circle at 80% 75%, rgba(242, 183, 5, 0.08), transparent 50%);
+  pointer-events: none;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--green);
+  position: relative;
+  z-index: 2;
+  margin-bottom: 18px;
+}
+
+.headline {
+  position: relative;
+  z-index: 2;
+  font-weight: 700;
+  line-height: 0.94;
+  letter-spacing: -0.01em;
+  font-size: clamp(52px, 11vw, 148px);
+  margin: 0;
+}
+
+.headline span {
+  display: block;
+}
+
+.gold {
+  color: var(--gold);
+}
+
+.sub {
+  position: relative;
+  z-index: 2;
+  max-width: 480px;
+  margin-top: 26px;
+  font-size: 17px;
+  color: var(--text-muted);
+}
+
+.sub strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.scrollCue {
+  position: absolute;
+  right: clamp(20px, 5vw, 56px);
+  bottom: 34px;
+  z-index: 2;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.scrollCue::after {
+  content: "↓";
+  animation: bounce 1.6s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.frame {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.frame::before {              /* vertical line, left edge, full height */
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 16px;
+  width: 1px;
+  background: var(--line);
+}
+
+.frame::after {                /* horizontal line, full width, under nav */
+  content: "";
+  position: absolute;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--line);
+}
